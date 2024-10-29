@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiStackLayout.MainPage">
+    <Grid RowDefinitions="Auto,Auto,Auto,*">
+
+        <!--Issue when i add Scrollview Orientation is Horizontal-->
+       <ScrollView Orientation="Horizontal" Grid.Row="0" HeightRequest="50" BackgroundColor="Green" HorizontalOptions="Fill">
+           <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="Pink">
+               <Label Text="Hello"/>
+	        </StackLayout>
+        </ScrollView>
+
+        <!--No issue-->
+        <StackLayout Grid.Row="1" HorizontalOptions="Fill" HeightRequest="50" BackgroundColor="Yellow"/>
+
+         <!--No issue Without orientation-->
+         <ScrollView Grid.Row="2" HeightRequest="50" BackgroundColor="Green" HorizontalOptions="Fill">
+           <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="Pink">
+               <Label Text="Hello"/>
+	        </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
+
